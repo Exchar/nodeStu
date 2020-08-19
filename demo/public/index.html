@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>小鲜超市管理系统</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./utils/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script src="./utils/jquery.min.js"></script>
+	<script src="./utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="./utils/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="./utils/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="./utils/layui/css/layui.css" />
+	<script src="./js/index.js"></script>
+</head>
+
+<body>
+	<div class="zhe"></div>
+	<div id="left">
+		<ul id="leftMain">
+			<div id="logo">
+				<img src="./img/logo.png" alt="">
+			</div>
+			<li><a href="javascript:" class="btn btn-block btn-success" id="index">首页 <span
+						class="glyphicon glyphicon-plus"></span>
+				</a>
+
+			</li>
+			<li id="personInfoManage"><a href="./pages/personInfo.html" class="btn btn-block btn-success">个人信息维护<span
+						class="glyphicon glyphicon-plus"></span>
+				</a>
+
+			</li>
+			<li id="staffManage"><a href="./pages/yuangong.html" class="btn btn-block btn-success"
+					target="myFrame">员工信息管理 <span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</li>
+			<li id="goodsInfoManage"><a href="javascript:" class="btn btn-block btn-success">商品信息管理<span
+						class="glyphicon glyphicon-plus"></span>
+				</a>
+				<!-- 二级菜单 -->
+				<ul class="innerNav">
+					<li><a href="pages/goodsManage.html" class="btn innerBtn btn-success" id="goodsManage"
+							target="myFrame"><span class="glyphicon glyphicon-triangle-right tag"></span>商品信息管理及查询</a>
+					</li>
+					<li><a href="pages/goodsList.html" class="btn innerBtn btn-success" id="goodsList"
+							target="myFrame"><span class="glyphicon glyphicon-triangle-right tag"></span>商品详情一览</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:" class="btn btn-block btn-success">消费查询及打印票据
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+				<!-- 二级菜单 -->
+				<ul class="innerNav">
+					<li><a href="./pages/payrecords.html" class="btn innerBtn btn-success" target="myFrame"
+							id="payRecordsManage"><span class="glyphicon glyphicon-triangle-right tag"></span>用户消费记录</a>
+					</li>
+					<li><a href="./pages/evalute.html" class="btn innerBtn btn-success" target="myFrame"
+							id="evaluteShow"><span class="glyphicon glyphicon-triangle-right tag"></span>票据生成</a></li>
+				</ul>
+
+			</li>
+			<li id="supplierManage"><a href="./pages/supplier.html" class="btn btn-block btn-success"
+					target="myFrame">供应商管理<span class="glyphicon glyphicon-plus"></span>
+				</a>
+
+			</li>
+			<li id="reperManage"><a href="./pages/repertoryManage.html" class="btn btn-block btn-success"
+					target="myFrame">库存管理<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</li>
+			<li id="userManage"><a href="javascript:" class="btn btn-block btn-success">用户管理<span
+						class="glyphicon glyphicon-plus"></span>
+				</a>
+				<!-- 二级菜单 -->
+				<ul class="innerNav">
+					<li><a href="javascript:" class="btn innerBtn btn-success"><span
+								class="glyphicon glyphicon-triangle-right tag"></span>二级菜单1</a></li>
+					<!-- <li><a href="javascript:" class="btn innerBtn btn-success"><span class="glyphicon glyphicon-triangle-right tag"></span>二级菜单2</a></li> -->
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+	<div id="right">
+		<div id="rightMain">
+			<h3 class="text-center">小鲜超市管理系统</h3>
+			<div class="topInfo">
+				<div class="dropdown">
+					<span class="dropdown-toggle  " type="button" id="dropdownMenu1" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="true">
+
+						<span class="personTou">
+							<img src=" " alt="">
+						</span>
+						<span id="personText">个人中心</span>
+					</span>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="./pages/personInfo.html" id="personInfo">个人信息维护</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#" id="zhuxiao">注销当前账户</a></li>
+					</ul>
+				</div>
+				<p id="link"><span>首页</span><span id="linkInfo"></span></p>
+			</div>
+			<iframe name="myFrame"></iframe>
+
+			<h4>最新公告:</h4>
+			<div id="showNews">
+				<ol class="newsItem">
+					<li><span class="layui-icon layui-icon-top"></span>【置顶】关注员工健康，填写疫情问卷调查</li>
+					<li>业绩再创新高!</li>
+					<li>终于！超市管理系统上线</li>
+					<li>本月超市营收公布..</li>
+				</ol>
+				<ul class="newsItem">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ol class="newsItem">
+					<li>最佳员工公示</li>
+					<li>水果价目表</li>
+					<li>商品价目表一览</li>
+					<li>订单查询</li>
+				</ol>
+			</div>
+			<h4>热点关注:</h4>
+			<div id="showArt">
+				<div class="artItem">1</div>
+				<div class="artItem">2</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户消费记录</title>
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../utils/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../utils/layui/css/layui.css" />
+		<script src="../utils/jquery.min.js"></script>
+		<script src="../utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../utils/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/goodsManage.css" />
+		<script src="../js/goosManage.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<div id="otherAction">
+			<input id="search" placeholder="输入商品名以搜索" type="text" class="form-control" />
+			<button id="searchGoodsItem" class="layui-btn layui-btn-normal layui-btn-normal">搜索</button>
+			<button id="addGoodsItem" class="layui-btn layui-btn-danger layui-btn-normal" data-toggle="modal" data-target="#addGoodsModal">添加商品条目</button>
+		</div>
+		<div id="contentMain">
+			<div id="tableMain" class="table-responsive">
+				<table id="mainTable" border="" cellspacing="" cellpadding="" class="table table-bordered table-striped text-center table-hover">
+					<caption class="text-center">商品信息管理</caption>
+					<thead>
+						<th>id</th>
+						<th>序号</th>
+						<th>商品名</th>
+						<th>生产日期</th>
+						<th>保质期</th>
+						<th>产地</th>
+						<th>售价</th>
+						<th>型号</th>
+						<th>折扣</th>
+						<th>操作</th>
+					</thead>
+					<tbody>
+
+					</tbody>
+
+				</table>
+			</div>
+			<div id="mainAction">
+				<nav aria-label="Page navigation">
+					<ul class="pagination">
+						<li id="pagePrevious">
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">上一页</span>
+							</a>
+						</li>
+						<!-- <li class="pageGotoBtn"><a href="#">1</a></li> -->
+						<li id="pageNext">
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">下一页</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="pageGoto btn-group">
+						<li class="gotoPage">
+							<select name="pageSelect" class="form-control" id="gotoSelection">
+								
+							</select>
+						</li>
+						<li class="choosePage">
+							转到:
+							<input type="number" name="" id="gotoPageInput" value="" class="form-control" />
+							<button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="gotoPageConfirm">确定</button>
+						</li>
+						<li class="chooseAmount">
+							<span>每一页显示:</span>
+							<select name="showPageSelect" class="form-control" value="10">
+								<option value="5">5</option>
+								<option value="10">10</option>
+								<option value="20">20</option>
+								<option value="30">30</option>
+								<option value="40">40</option>
+							</select>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+		<!-- 添加条目的模态框 -->
+		<div class="modal fade" id="addGoodsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">添加商品条目<img src="../utils/layui/images/face/2.gif" ></h4>
+				
+		      </div>
+		      <div class="modal-body">
+				 <div id="addGoodsItemTishi">
+					 <p></p>
+				 </div>
+		        <div class="input-group">
+					 <span class="input-group-addon" id="basic-addon1">*商品名：</span>
+					  <input type="text" class="form-control" required="required" placeholder="输入商品名" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon2">*品牌：</span>
+					  <input type="text" class="form-control" placeholder="输入品牌" aria-describedby="basic-addon2">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon3">*生产日期：</span>
+					  <input type="date" class = "form-control" placeholder="生产日期" aria-describedby="basic-addon3">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon4">保质期：</span>
+					  <input type="date" class="form-control" placeholder="输入商品名" aria-describedby="basic-addon4">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon5">*售价(单位：元)：</span>
+					  <input type="number" required="required" class="form-control" placeholder="售价" aria-describedby="basic-addon5">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon6">折扣(小数)：</span>
+					  <input type="text" class="form-control" placeholder="折扣" aria-describedby="basic-addon6">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon7">采购价(单位：元)：</span>
+					  <input type="number" class="form-control" placeholder="采购价" aria-describedby="basic-addon7">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon8">分类：</span>
+					  <input type="text" class="form-control" placeholder="分类" aria-describedby="basic-addon8">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon9">产地：</span>
+					  <input type="text" class="form-control" placeholder="产地" aria-describedby="basic-addon9">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon10">*型号：</span>
+					  <input type="text" class="form-control" placeholder="型号" aria-describedby="basic-addon10">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon11">商品描述：</span>
+					  <input type="text" class="form-control" placeholder="描述" aria-describedby="basic-addon11">
+				</div>
+				<div class="input-group">
+					 <span class="input-group-addon" id="basic-addon12">*商品图片：</span>
+					  <input id="addImgShow" type="file" class="form-control" placeholder="描述" aria-describedby="basic-addon12">
+				</div>
+				<div id="imgShow">
+					<img src=" " alt="未选择商品图片">
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <span class="btn btn-default" data-dismiss="modal">关闭</span>
+		        <span class="btn btn-primary" id="addGoodsItemConfirm">保存</span>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!--修改条目的模态框    -->
+		<div class="modal fade" id="modifyGoodsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel2 ">修改商品条目<img src="../utils/layui/images/face/2.gif" ></h4>
+					
+			      </div>
+			      <div class="modal-body">
+					 <div id="modifyGoodsItemTishi">
+						 <p></p>
+					 </div>
+			        <div class="input-group">
+						 <span class="input-group-addon">*商品名：</span>
+						  <input type="text" class="form-control" required="required"  aria-describedby="basic-addon1">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">*品牌：</span>
+						  <input type="text" class="form-control"  aria-describedby="basic-addon2">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">*生产日期：</span>
+						  <input type="date" class = "form-control"  aria-describedby="basic-addon3">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">保质期：</span>
+						  <input type="date" class="form-control"  aria-describedby="basic-addon4">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">*售价(单位：元)：</span>
+						  <input type="number" required="required" class="form-control" aria-describedby="basic-addon5">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">折扣(小数)：</span>
+						  <input type="text" class="form-control" aria-describedby="basic-addon6">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">采购价(单位：元)：</span>
+						  <input type="number" class="form-control" aria-describedby="basic-addon7">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">分类：</span>
+						  <input type="text" class="form-control" aria-describedby="basic-addon8">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">产地：</span>
+						  <input type="text" class="form-control" aria-describedby="basic-addon9">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">*型号：</span>
+						  <input type="text" class="form-control" aria-describedby="basic-addon10">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">商品描述：</span>
+						  <input type="text" class="form-control" aria-describedby="basic-addon11">
+					</div>
+					<div class="input-group">
+						 <span class="input-group-addon">*商品图片：</span>
+						  <input type="file" class="form-control" aria-describedby="basic-addon12">
+					</div>
+					<div id="modifyImgShow">
+						<img src=" " alt="未选择商品图片">
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <span class="btn btn-default" data-dismiss="modal">关闭</span>
+			        <span class="btn btn-primary" id="modifyGoodsItemConfirm">修改</span>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		
+	</body>
+</html>

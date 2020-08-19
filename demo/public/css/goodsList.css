@@ -1,0 +1,25 @@
+.media{
+	background-color:rgba(218, 239, 214, 0.8);
+	width: 90%;
+	margin:20px auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding-top: 30px;
+	color:black;
+	transition: all .8s ease;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+body{
+	position: relative;
+}
+.media img{
+	transform: scale(.7);
+	border-radius: 10px;
+	width: 280px;
+}
+.media p{
+	line-height: 1.9em;
+}

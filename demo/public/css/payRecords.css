@@ -1,0 +1,173 @@
+#otherAction {
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+#search {
+    width: 240px;
+    display: inline-block;
+    border-radius: 4px;
+    position: relative;
+}
+
+button.layui-btn {
+    outline: none;
+    border-radius: 4px;
+}
+
+#addpayRecordsItem,
+#searchpayRecordsItem {
+    line-height: 34px;
+    height: 34px;
+}
+
+#mainTable {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav {
+    overflow: hidden;
+}
+
+th {
+    text-align: center;
+}
+
+.payRecordsAction {
+    width: 20%;
+}
+
+.payRecordsAction>span {
+    margin-right: 20px;
+}
+
+#mainTable td {
+    vertical-align: middle;
+}
+
+table caption {
+    color: #000000;
+}
+
+#mainAction {
+    margin-left: 40px;
+}
+
+.pagination {
+    float: left;
+    margin-right: 100px;
+}
+
+ul.pageGoto {
+    width: 60%;
+    float: left;
+    margin: 20px auto;
+}
+
+.pageGoto>li {
+    float: left;
+    margin-right: 10%;
+}
+
+#gotoPageInput {
+    width: 100px;
+    display: inline-block;
+}
+
+.layui-btn-sm {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 34px;
+    line-height: 34px;
+    vertical-align: top;
+}
+
+.gotoPage.dropdown-toggle {
+    width: 80px;
+}
+
+.choosePage {
+    width: 200px;
+}
+
+.gotoPage {
+    float: left;
+    width: 80px;
+}
+
+.chooseAmount select.form-control {
+    display: inline-block;
+    width: 30%;
+}
+
+.chooseAmount {
+    width: 240px;
+}
+
+#tableMain {
+    height: 630px;
+    overflow-y: scroll;
+}
+
+.input-group {
+    margin: 10px auto;
+}
+
+.input-group-addon {
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+    border: none;
+}
+
+#imgShow {
+    display: block;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+#imgShow>img {
+    width: 100%;
+}
+
+#addpayRecordsItemTishi {
+    color: red;
+    text-align: center;
+}
+
+#addpayRecordsModal .modal-body>.input-group>span {
+    width: 12em;
+    text-align: left;
+
+}
+
+#addpayRecordsModal .modal-body>.input-group>input,#addpayRecordsModal .modal-body>.input-group>select {
+    width: 30em;
+}
+
+#contentMain tr:hover {
+    background-color: #baeef0;
+}
+
+.searchTips {
+    height: 30px;
+    line-height: 30px;
+    width: 240px;
+    position: absolute;
+    background-color: #4bb2ff;
+    margin-top: .5px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.searchTips:hover {
+    background-color: #308dff;
+}
+#dateTishi{
+	color: red;
+	margin-left: 5px;
+	display: none;
+}

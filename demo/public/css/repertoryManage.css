@@ -1,0 +1,97 @@
+#otherAction{
+	margin-left: 80px;
+	margin-top:30px;
+}
+#search{
+	width: 240px;
+	display: inline-block;
+	border-radius: 4px;
+}
+button.layui-btn{
+	outline: none;
+	border-radius: 4px;
+}
+#addGoodsItem,#searchGoodsItem{
+	line-height: 34px;
+	height: 34px;
+}
+#mainTable{
+	text-align: center;
+	margin-top: 20px;
+}
+th{
+	text-align: center;
+}
+.goodsAction{
+	width: 20%;
+}
+#mainTable td{
+	vertical-align: middle;
+}
+.btn{
+	margin-left: 10px;
+}
+.goodsAction{
+	width: 20%;
+}
+.goodsAction>span{
+	margin-right: 6px;
+}
+#mainTable td{
+	vertical-align: middle;
+}
+table caption{
+	color: #000000;
+}
+#mainAction{
+	margin-left: 40px;
+}
+.pagination{
+	float: left;
+	margin-right: 100px;
+}
+ul.pageGoto{
+	width: 60%;
+	float: left;
+	margin: 20px auto;
+}
+.pageGoto>li{
+	float: left;
+	margin-right: 10%;
+}
+#gotoPageBtn{
+	width: 100px;
+	display: inline-block;
+}
+.layui-btn-sm{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 34px;
+	line-height: 34px;
+	vertical-align: top;
+}
+.gotoPage.dropdown-toggle{
+	width: 80px;
+}
+.choosePage{
+	width: 200px;
+}
+.gotoPage{
+	float: left;
+	width: 80px;
+}
+.chooseAmount select.form-control{
+	display: inline-block;
+	width: 30%;
+}
+.chooseAmount{
+	width: 240px;
+}
+#tableMain{
+	overflow-y: scroll;
+}
+#searchnum{
+	width: 140px;
+	display: inline-block;
+	border-radius: 4px;
+}

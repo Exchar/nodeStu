@@ -1,0 +1,135 @@
+.main {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+.main>div {
+	flex: 1;
+	background-color: #d5dbd5;
+	width: 40%;
+	height: 300px;
+
+}
+
+.main>div:first-child {
+	margin-right: 50px;
+	text-align: center;
+}
+
+.main>div:first-child>p {
+	margin-top: 30px;
+	font-size: 1.8em;
+}
+
+.main>div:first-child img {
+	width: 150px;
+	margin-top: 20px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.main>div:last-of-type {
+	font-size: 1.4em;
+	padding-left: 80px;
+	box-sizing: border-box;
+	padding-top: 50px;
+}
+
+.main>div:last-of-type li {
+	line-height: 50px;
+	height: 50px;
+}
+
+#subBtn {
+	margin-top: 40px;
+
+}
+
+#subBtn span {
+	display: inline-block;
+	margin-left: 70%;
+	display: none;
+}
+
+#updateNickName,
+#updatepwd {
+	font-size: .7em;
+	cursor: pointer;
+	display: none;
+}
+
+input.form-control {
+	display: inline-block;
+	width: 120px;
+	color: black;
+	border: none;
+	outline: none;
+
+}
+
+#item2 input.nickName,
+#item2 input.password {
+	border: none;
+	box-shadow: none;
+	background-color: rgba(0, 0, 0, 0);
+	font-size: .9em;
+}
+
+#item2>ul>li:hover #updateNickName {
+	display: inline-block;
+}
+
+#item2>ul>li:hover #updatepwd {
+	display: inline-block;
+}
+
+#tishi {
+	display: none;
+	text-align: center;
+	color: rgb(84, 211, 84);
+}
+
+.tucao {
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+	background-color: #d5dbd5;
+	padding: 40px;
+}
+
+.tucao>textarea {
+	resize: none;
+	width: 100%;
+	border: none;
+	text-indent: 2em;
+	padding-left: 1em;
+	padding-top: 1em;
+}
+
+.back {
+	margin-top: 20px;
+	width: 120px;
+	height: 120px;
+	margin: auto;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.back>span {
+	height: 100%;
+	width: 100%;
+	background-color: #3ebd3e;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .2s;
+
+}
+
+.back>span:active{
+	background-color: #1b701b;
+	color: white;
+}

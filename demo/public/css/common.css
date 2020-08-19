@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@media screen and (min-width:1200px){
+    html{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:1200px) and (min-width:767px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:767px) {
+    html {
+        font-size: 14px;
+    }
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    background-color: #eaf0ed;
+}
+

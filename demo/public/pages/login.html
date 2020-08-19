@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>用户登录</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../utils/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../utils/layui/css/layui.css" />
+	<script src="../utils/jquery.min.js"></script>
+	<script src="../utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="../utils/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/data.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<section>
+		<div id="logo">
+			<img src="../img/logo2222.png" >
+		</div>
+		<div class="loginMain">
+			<div class="login">
+				<h2>小鲜超市管理系统</h2>
+				
+				<h2>用户登录</h2>
+				<div class="tou"><img src=" " alt=""></div>
+				<form action="index.html" name="myForm1" onsubmit="return beforeSubmit()">
+					<div class="user">
+						<label for="username">用户名:</label>
+						<input type="text" name="username" id="username" class="form-control" placeholder="请输入用户名">
+					</div>
+					<p class="errorInfo1"></p>
+					<span class="yesNo"></span>
+					<div class="pwd">
+						<label for="password">密码:</label>
+						<input type="password" name="password" id="password" class="form-control" placeholder="请输入密码">
+					</div>
+					<p class="errorInfo2"></p>
+					<button id="loginConfirm">登录</button>
+					<div class="out"><div class="okOut" title="点击即可记住密码"><span id="ok" class="layui-icon layui-icon-ok"></span></div><p id="remember">记住密码</p></div>
+					<p class="tishi"></p>
+				</form>
+			</div>
+			<div class="zhe">
+
+			</div>
+			<div class="backImg">
+				
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

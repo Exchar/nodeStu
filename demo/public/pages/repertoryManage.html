@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/repertoryManage.css">
+    <link href="../utils/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../utils/layui/css/layui.css" />
+    <script src="../utils/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../css/repertoryManage.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]--> 
+    <script src="../utils/jquery.min.js"></script>
+    <script src="../utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../js/repertoryManage.js"></script>
+  </head>
+  <body>
+    <div id="otherAction">
+        <input id="search" placeholder="请先选择右边的" type="text" class="form-control" />
+        <select name="" id="searchnum" class="form-control">
+          <option value="0" selected="selected">商品名称</option>
+          <option value="1">生产厂商</option>
+          <option value="2">库存下限（大于）</option>
+          <option value="3">采购价（大于））</option>
+        </select>
+        <button id="searchGoodsItem" class="layui-btn layui-btn-normal layui-btn-normal">搜索</button>
+        <button id="addGoodsItem" class="layui-btn layui-btn-danger layui-btn-normal" data-toggle="modal" data-target="#myModal">添加库存</button>
+    </div>
+    <div id="contentMain">
+        <div id="myTable" class="table-responsive">
+            <table id="tableMain" border="" cellspacing="" cellpadding="" class="table table-bordered table-striped text-center table-hover">
+                <thead>
+                     <tr class="text-center">
+                    <th>商品名称</th>
+                    <th>数量（单位：袋/瓶）</th>
+                    <th>采购价（单位：元）</th>
+                    <th>售价（单位：元）</th>
+                    <th>库存下限</th>
+                    <th>生产厂商</th>
+                    <th>备注</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tablebody">
+                </tbody>
+            </table>
+            <div id="mainAction">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li id="pagePrevious">
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">上一页</span>
+                    </a>
+                  </li>
+                  <!-- <li class="pageGotoBtn"><a href="#">1</a></li> -->
+                  <li id="pageNext">
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">下一页</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="pageGoto btn-group">
+                  <li class="choosePage">
+                    转到:
+                    <input type="number" name="" id="gotoPageBtn" value="1" class="form-control" />
+                    <button type="button" class="layui-btn layui-btn-normal layui-btn-sm sure">确定</button>
+                  </li>
+                </ul>
+              </nav>
+      
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">库存添加</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">商品名称</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="goodsName" placeholder="请输入商品名称">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-4 control-label">数量（单位：袋/瓶）</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="amount" placeholder="请输入数量">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">采购价（单位：元）</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="purchasePrice" placeholder="请输入采购价">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">售价（单位：元）</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="price" placeholder="请输入售价">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">库存下限</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="repertoryAmount" placeholder="请输入库存下限">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">生产厂商</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="manufacturer" placeholder="请输入生产厂商">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">备注</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="comment" placeholder="请输入备注">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary save">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel1">库存修改</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">商品名称</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="goodsName1" placeholder="请输入商品名称">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-4 control-label">数量（单位：袋/瓶）</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="amount1" placeholder="请输入数量">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">采购价（单位：元）</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="purchasePrice1" placeholder="请输入采购价">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">售价（单位：元）</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="price1" placeholder="请输入售价">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">库存下限</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="repertoryAmount1" placeholder="请输入库存下限">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">生产厂商</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="manufacturer1" placeholder="请输入生产厂商">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">备注</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="comment1" placeholder="请输入备注">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary saveEdit">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
